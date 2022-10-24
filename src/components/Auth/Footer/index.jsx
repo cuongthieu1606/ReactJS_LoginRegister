@@ -1,75 +1,75 @@
 import React from "react";
 import "./styles.scss";
 
+const text1 = [
+  "Tiếng Việt",
+  "English (UK)",
+  "中文(台灣)",
+  "한국어",
+  "日本語",
+  "Français (France)",
+  "ภาษาไทย",
+  "Español",
+  "Português (Brasil)",
+  "Deutsch",
+  "Italiano",
+];
+
+const text2 = [
+  "Đăng ký",
+  "Đăng nhập",
+  "Messenger",
+  "Facebook",
+  "LiteWatch",
+  "Địa điểm",
+  "Trò chơi",
+  "Marketplace",
+  "Meta Pay",
+  "Oculus",
+  "Portal",
+  "Instagram",
+  "Bulletin",
+  "Địa phương",
+  "Chiến dịch gây quỹ",
+  "Dịch vụ",
+  "Trung tâm thông tin bỏ phiếu",
+  "Nhóm",
+  "Giới thiệu",
+  "Tạo quảng cáo",
+  "Tạo Trang",
+  "Nhà phát triển",
+  "Tuyển dụng",
+  "Quyền riêng tư",
+  "Cookie",
+  "Lựa chọn quảng cáo",
+  "Điều khoản",
+  "Trợ giúp",
+  "Tải thông tin liên hệ lên & đối tượng không phải người dùng",
+  "Cài đặt",
+  "Nhật ký hoạt động",
+];
+
 const Footer = () => {
   return (
-    <div className="container">
+    <>
       <div class="footer-link">
-        <a href="">Sing Up</a>
-
-        <a href="">Log In</a>
-
-        <a href="">Messenger</a>
-
-        <a href="">Facebook Lite</a>
-
-        <a href="">Watch</a>
-
-        <a href="">People</a>
-
-        <a href=""> Pages</a>
-
-        <a href="">Page categories</a>
-
-        <a href="">Places</a>
-
-        <a href="">Games</a>
-
-        <a href="">Locations</a>
-
-        <a href="">Marketplace</a>
-
-        <a href="">FacebookPay</a>
-
-        <a href="">Groups</a>
-
-        <a href="">Oculus</a>
-
-        <a href="">Portal</a>
-
-        <a href="">Instagram</a>
-
-        <a href="">Local</a>
-
-        <a href="">Fundraisers</a>
-
-        <a href="">Services</a>
-
-        <a href="">About</a>
-
-        <a href="">Create ad</a>
-
-        <a href="">Create Page</a>
-
-        <a href="">Developers</a>
-
-        <a href="">Careers</a>
-
-        <a href="">Privacy</a>
-
-        <a href="">Cookies</a>
-
-        <a href="">AdChoice</a>
-
-        <a href="">Terms</a>
-
-        <a href="">Help</a>
+        {text1.map(text => (
+          <a href="#"> {text}</a>
+        ))}
+      </div>
+      <div class="footer-link-1">
+        <hr />
+      </div>
+      <div class="footer-link">
+        {text2.map(text2 => (
+          <a href="#"> {text2}</a>
+        ))}
       </div>
 
       <div class="facebook-2020">
-        <a href="">Facebook © 2020</a>
+        <a href="">Meta © 2022</a>
       </div>
-    </div>
+    </>
   );
 };
 
