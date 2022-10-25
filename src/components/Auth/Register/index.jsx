@@ -1,10 +1,14 @@
 import axios from "axios";
+import classNames from "classnames";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Date from "../../assets/fake-data/Date";
 import Month from "../../assets/fake-data/Month";
 import Year from "../../assets/fake-data/Year";
-import "./styles.scss";
+import styles from "./styles.scss";
+import { MdClose } from "react-icons/md";
+
+const cx = classNames.bind(styles);
 
 const Register = () => {
   const [toggle, setToggle] = useState(false);
@@ -46,28 +50,26 @@ const Register = () => {
     }
   };
 
-
-  const Validate = () => {
-    
-  }
   return (
-    <div className="container">
-      <div className="modal">
-        <div className="modal-signup">
+    <div className={cx("container")}>
+      <div className={cx("modal")}>
+        <div className={cx("modal-signup")}>
           <Link to="/login">
-            <div className="modal-close" onClick={handleClick}>
-              X
+            <div className={cx("modal-close")} onClick={handleClick}>
+              <MdClose />
             </div>
           </Link>
 
-          <div className="modal-signup-heading">
-            <p className="modal-signup-name">Đăng ký</p>
+          <div className={cx("modal-signup-heading")}>
+            <p className={cx("modal-signup-name")}>Đăng ký</p>
 
-            <p className="modal-signup-child-name">Nhanh chóng và dễ dàng.</p>
+            <p className={cx("modal-signup-child-name")}>
+              Nhanh chóng và dễ dàng.
+            </p>
           </div>
 
           <form onChange={register}>
-            <div className="modal-signup-name">
+            <div className={cx("modal-signup-name")}>
               <input
                 type="text"
                 placeholder="Họ"
@@ -87,7 +89,7 @@ const Register = () => {
               />
             </div>
 
-            <div className="modal-signup-email">
+            <div className={cx("modal-signup-email")}>
               <input
                 type="email"
                 placeholder="Số di động hoặc email"
@@ -98,7 +100,7 @@ const Register = () => {
               />
             </div>
 
-            <div className="modal-signup-password">
+            <div className={cx("modal-signup-password")}>
               <input
                 type="password"
                 placeholder="Mật khẩu mới"
@@ -109,16 +111,16 @@ const Register = () => {
               />
             </div>
 
-            <div className="modal-date-birth">
+            <div className={cx("modal-date-birth")}>
               <label>Ngày sinh</label>
 
-              <div className="modal-date-alert">
+              <div className={cx("modal-date-alert")}>
                 <a>&#63;</a>
               </div>
             </div>
 
-            <div className="modal-date-selection">
-              <div className="select-choice">
+            <div className={cx("modal-date-selection")}>
+              <div className={cx("select-choice")}>
                 <select
                   name="dateOfBirth"
                   id=""
@@ -132,7 +134,7 @@ const Register = () => {
                   ))}
                 </select>
               </div>
-              <div className="select-choice">
+              <div className={cx("select-choice")}>
                 <select
                   name="dateOfBirth"
                   id=""
@@ -146,7 +148,7 @@ const Register = () => {
                   ))}
                 </select>
               </div>
-              <div className="select-choice">
+              <div className={cx("select-choice")}>
                 <select
                   name="dateOfBirth"
                   id=""
@@ -162,15 +164,15 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="modal-gender">
+            <div className={cx("modal-gender")}>
               <label>Giới tính</label>
 
-              <div className="modal-gender-alert">
+              <div className={cx("modal-gender-alert")}>
                 <a>&#63;</a>
               </div>
             </div>
 
-            <div className="modal-gender-choice">
+            <div className={cx("modal-gender-choice")}>
               <div className="modal-gender-name">
                 <label>Nữ</label>
 
@@ -183,7 +185,7 @@ const Register = () => {
                 />
               </div>
 
-              <div className="modal-gender-name">
+              <div className={cx("modal-gender-name")}>
                 <label>Nam</label>
 
                 <input
@@ -195,7 +197,7 @@ const Register = () => {
                 />
               </div>
 
-              <div className="modal-gender-name">
+              <div className={cx("modal-gender-name")}>
                 <label>Tuỳ chỉnh</label>
 
                 <input
@@ -208,7 +210,7 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="modal-signup-terms">
+            <div className={cx("modal-signup-terms")}>
               <span>
                 Người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ
                 của bạn lên Facebook. <a href="#">Tìm hiểu thêm</a>.
@@ -221,7 +223,7 @@ const Register = () => {
               </p>
             </div>
 
-            <div className="modal-signup-button">
+            <div className={cx("modal-signup-button")}>
               <button type="submit">Đăng ký</button>
             </div>
           </form>

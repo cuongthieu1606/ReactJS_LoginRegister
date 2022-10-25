@@ -2,9 +2,11 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
-import "./styles.scss";
+import styles from "./styles.scss";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import classNames from "classnames";
 
+const cx = classNames.bind(styles);
 const Login = () => {
   const [form, setForm] = useState({
     email: "",
@@ -41,25 +43,25 @@ const Login = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="main">
-          <div className="main-left">
+      <div className={cx("container")}>
+        <div className={cx("main")}>
+          <div className={cx("main-left")}>
             <img
-              className="facebook-logo"
+              className={cx("facebook-logo")}
               src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo.png"
               alt=""
             />
 
-            <h3 className="facebook-status">
+            <h3 className={cx("facebook-status")}>
               Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống
               của bạn.
             </h3>
           </div>
 
           <form onChange={login}>
-            <div className="main-right">
-              <div className="main-right-login">
-                <div className="main-right-email">
+            <div className={cx("main-right")}>
+              <div className={cx("main-right-login")}>
+                <div className={cx("main-right-email")}>
                   <input
                     type="email"
                     placeholder="Email hoặc số điện thoại"
@@ -69,7 +71,7 @@ const Login = () => {
                   />
                 </div>
 
-                <div className="main-right-password">
+                <div className={cx("main-right-password")}>
                   <input
                     type={passwordShown ? "text" : "password"}
                     placeholder="Mật khẩu"
@@ -78,7 +80,7 @@ const Login = () => {
                     value={form.password}
                   />
                   <span
-                    className="main-right-password-show-hide"
+                    className={cx("main-right-password-show-hide")}
                     onClick={togglePassword}
                   >
                     {passwordShown ? (
@@ -89,25 +91,25 @@ const Login = () => {
                   </span>
                 </div>
 
-                <div className="main-right-button">
+                <div className={cx("main-right-button")}>
                   <button onClick={login} type="submit">
                     Đăng nhập
                   </button>
                 </div>
 
-                <div className="main-right-link">
+                <div className={cx("main-right-link")}>
                   <a href="">Quên mật khẩu?</a>
                 </div>
 
-                <div className="main-right-line"></div>
+                <div className={cx("main-right-line")}></div>
 
-                <div className="main-right-account">
+                <div className={cx("main-right-account")}>
                   <Link to="/register">
                     <button id="signup-account">Tạo tài khoản mới</button>
                   </Link>
                 </div>
               </div>
-              <div className="main-right-page-link">
+              <div className={cx("main-right-page-link")}>
                 <span>
                   <a href="">Tạo Trang</a> dành cho người nổi tiếng, thương hiệu
                   hoặc doanh nghiệp.
@@ -117,7 +119,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <div class="footer">
+      <div class={cx("footer")}>
         <Footer />
       </div>
     </>

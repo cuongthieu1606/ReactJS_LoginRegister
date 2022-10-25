@@ -1,140 +1,156 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-}
 .container {
   width: 100%;
   height: 100%;
   background-color: #f0f2f5;
-}
-.main {
-  width: 980px;
-  margin: auto;
-  height: 650px;
-  display: flex;
-  padding-top: 100px;
-}
-.main-left {
-  width: 580px;
-  padding: 20px;
-}
-.main-right {
-  width: 400px;
-  height: 450px;
-}
-.facebook-logo {
-  height: 170px;
-  margin-top: 35px;
-}
-.facebook-status {
-  font-size: 27px;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-.main-right-login {
-  padding: 20px;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-.main-right-email {
-  width: 100%;
-  margin-top: 10px;
-}
-.main-right-email input[type="email"] {
-  width: 100%;
-  padding: 9px;
-  font-size: 17px;
-  border: none;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.main-right-password {
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-}
-.main-right-password input[type="password"], .main-right-password input[type="text"] {
-  width: 100%;
-  padding: 9px;
-  font-size: 17px;
-  border: none;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
-.main-right-password-show-hide {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin-top: 11px;
-  margin-right: 15px;
-  font-size: 18px;
-}
-.main-right-button {
-  width: 100%;
-  margin-top: 20px;
-}
-.main-right-button button {
-  width: 100%;
-  padding: 9px;
-  font-size: 17px;
-  border: none;
-  background-color: #1877f2;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.main-right-link {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-}
-.main-right-link a {
-  font-size: 17px;
-  text-decoration: none;
-  color: #1877f2;
-}
-.main-right-line {
-  width: 100%;
-  height: 1px;
-  margin-top: 20px;
-  border: 1px solid #ccc;
-}
-.main-right-account {
-  width: 100%;
-  margin-top: 20px;
-}
-.main-right-account {
-  width: 220px;
-  margin: auto;
-  margin-top: 20px;
-}
-.main-right-account button {
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-  border: none;
-  background-color: #42b72a;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-}
-.main-right-page-link {
-  width: 400px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-}
-.main-right-page-link a {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-.main-right-page-link p {
-  margin-left: 5px;
+  .main {
+    width: 980px;
+    margin: auto;
+    height: 650px;
+    display: flex;
+    padding-top: 100px;
+
+    .main-left {
+      width: 580px;
+      padding: 20px;
+
+      .facebook-logo {
+        height: 170px;
+        margin-top: 35px;
+      }
+
+      .facebook-status {
+        font-size: 27px;
+        font-weight: 400;
+        margin-bottom: 40px;
+      }
+    }
+
+    .main-right {
+      width: 400px;
+      height: 450px;
+
+      .main-right-login {
+        padding: 20px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+
+        .main-right-email {
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        .main-right-email input[type="email"] {
+          width: 100%;
+          padding: 9px;
+          font-size: 17px;
+          border: none;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .main-right-password {
+          width: 100%;
+          margin-top: 20px;
+          position: relative;
+        }
+
+        .main-right-password input[type="password"],
+        .main-right-password input[type="text"] {
+          width: 100%;
+          padding: 9px;
+          font-size: 17px;
+          border: none;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .main-right-password-show-hide {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin-top: 11px;
+          margin-right: 15px;
+          font-size: 18px;
+        }
+
+        .main-right-button {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .main-right-button button {
+          width: 100%;
+          padding: 9px;
+          font-size: 17px;
+          border: none;
+          background-color: #1877f2;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        .main-right-link {
+          width: 100%;
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        .main-right-link a {
+          font-size: 17px;
+          text-decoration: none;
+          color: #1877f2;
+        }
+
+        .main-right-line {
+          width: 100%;
+          height: 1px;
+          margin-top: 20px;
+          border: 1px solid #ccc;
+        }
+
+        .main-right-account {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .main-right-account {
+          width: 220px;
+          margin: auto;
+          margin-top: 20px;
+        }
+
+        .main-right-account button {
+          width: 100%;
+          padding: 10px;
+          font-size: 20px;
+          border: none;
+          background-color: #42b72a;
+          border-radius: 10px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .main-right-page-link {
+        width: 400px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .main-right-page-link a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+
+      .main-right-page-link p {
+        margin-left: 5px;
+      }
+    }
+  }
 }
