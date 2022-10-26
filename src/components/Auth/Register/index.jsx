@@ -10,8 +10,7 @@ import { MdClose } from "react-icons/md";
 
 const cx = classNames.bind(styles);
 
-const Register = () => {
-  const [toggle, setToggle] = useState(false);
+const Register = ({show}) => {
   const [form, setForm] = useState({
     lastname: "",
     firstname: "",
@@ -29,7 +28,7 @@ const Register = () => {
   };
 
   const handleClick = () => {
-    setToggle(!toggle);
+    show(false);
   };
 
   const register = async (e) => {
@@ -51,8 +50,6 @@ const Register = () => {
   };
 
   return (
-    <div className={cx("container")}>
-      <div className={cx("modal")}>
         <div className={cx("modal-signup")}>
           <Link to="/login">
             <div className={cx("modal-close")} onClick={handleClick}>
@@ -174,9 +171,10 @@ const Register = () => {
 
             <div className={cx("modal-gender-choice")}>
               <div className="modal-gender-name">
-                <label>Nữ</label>
+                <label for="sex_female">Nữ</label>
 
                 <input
+                  id="sex_female"
                   onChange={handleOnChangeInputRegister}
                   type="radio"
                   name="sex"
@@ -186,9 +184,10 @@ const Register = () => {
               </div>
 
               <div className={cx("modal-gender-name")}>
-                <label>Nam</label>
+                <label for="sex_male">Nam</label>
 
                 <input
+                  id="sex_male"
                   onChange={handleOnChangeInputRegister}
                   type="radio"
                   name="sex"
@@ -198,9 +197,10 @@ const Register = () => {
               </div>
 
               <div className={cx("modal-gender-name")}>
-                <label>Tuỳ chỉnh</label>
+                <label for="sex_option">Tuỳ chỉnh</label>
 
                 <input
+                  id="sex_option"
                   onChange={handleOnChangeInputRegister}
                   type="radio"
                   name="sex"
@@ -228,8 +228,6 @@ const Register = () => {
             </div>
           </form>
         </div>
-      </div>
-    </div>
   );
 };
 

@@ -5,9 +5,11 @@ import Footer from "../Footer";
 import styles from "./styles.scss";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import classNames from "classnames";
+import Register from "../Register";
 
 const cx = classNames.bind(styles);
 const Login = () => {
+  const [register, setRegister] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -40,10 +42,19 @@ const Login = () => {
       throw error;
     }
   };
+  const handleClickSwitchRegister = (e) => {
+    e.preventDefault();
+    setRegister(true);
+  }
 
   return (
     <>
       <div className={cx("container")}>
+        {
+          register ? <div className={cx("overlay")}>
+          <Register show={setRegister}/>
+        </div> : <></>
+        }
         <div className={cx("main")}>
           <div className={cx("main-left")}>
             <img
@@ -98,15 +109,13 @@ const Login = () => {
                 </div>
 
                 <div className={cx("main-right-link")}>
-                  <a href="">Quên mật khẩu?</a>
+                  <a href="#">Quên mật khẩu?</a>
                 </div>
 
                 <div className={cx("main-right-line")}></div>
 
                 <div className={cx("main-right-account")}>
-                  <Link to="/register">
-                    <button id="signup-account">Tạo tài khoản mới</button>
-                  </Link>
+                    <button id="signup-account" onClick={handleClickSwitchRegister}>Tạo tài khoản mới</button>
                 </div>
               </div>
               <div className={cx("main-right-page-link")}>
